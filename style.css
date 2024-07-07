@@ -1,0 +1,604 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+:root{
+    --main:#ef529c;
+    --boxshadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.3);
+    --boxshadowHover: 0 1rem 2.5rem rgba(0, 0, 0, 0.6);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s ease-in;
+    font-family: 'Cinzel
+    Decorative', serif;
+}
+*::selection{
+    background: var(--main);
+    color: #fff;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+section{
+    padding: 2rem 9%;
+}
+
+.btn{
+    background: var(--main);
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer;
+    padding: 0.8rem 3rem;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    border-radius: 2rem;
+}
+.btn:hover{
+    letter-spacing: 0.1rem;
+}
+
+/*for scrollbar*/
+
+::-webkit-scrollbar{
+    width: 0.4rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--main);
+}
+
+::-webkit-scrollbar-track{
+    background: #000;
+}
+
+/*for content*/
+.Content{
+    text-align: center;
+    margin-block: 1rem;
+}
+
+.Content h6{
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.Content h6 span{
+    color: var(--main);
+    font-weight: 900;
+}
+
+/* for navbar*/
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 9%;
+    box-shadow: var(--boxshadow);
+    z-index: 10000;
+}
+
+.navbar .logo img{
+    height: 6rem;
+}
+.navbar .NavbarMain a{
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #000;
+    margin-inline: 2rem;
+}
+.navbar .NavbarMain a:hover{
+    color: var(--main) !important;
+}
+
+/* for menubtn */
+#MenuBtn{
+    color: #000;
+    cursor: pointer;
+    display: none;
+} 
+/* for navbar*/
+
+/* for home */
+.Home{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url(https://i.pinimg.com/564x/8a/a5/05/8aa50578578adde1c682c559378a358a.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 0;
+}
+.Home .CustomHome{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center; 
+}
+.Home .CustomHome::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #fff, transparent);
+} 
+
+.Home .HomeContent{
+    position: relative;
+    padding: 5rem;
+    width: 100rem;
+}
+
+.Home .HomeContent h6{
+    font-size: 6rem;
+    font-weight: 800;
+}
+
+.Home .HomeContent p {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem 0;
+}
+/* for home */
+
+/* for custom */
+.Custom{
+    margin-block: 6rem;
+    text-align: center;
+}
+
+.Custom h6{
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+/* for custom */
+
+/* for aboutus */
+.Aboutus{
+    margin-bottom: 5rem;
+}
+
+.Aboutus .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.Aboutus .row .img{
+    flex: 1 1 45rem;
+    padding: 1rem;
+}
+
+.Aboutus .row .img img{
+    width: 100%;
+}
+
+.Aboutus .row .AboutContent{
+    flex: 1 1 45rem;
+}
+
+.Aboutus .row .AboutContent h6{
+    font-weight: 800;
+    font-size: 3.5rem;
+}
+
+.Aboutus .row .AboutContent p{
+    font-size: 1.5rem;
+    line-height: 1.2;
+    padding: 1rem 0;
+}
+
+/* for aboutus */
+
+/*for dj players */
+
+.DjPlayers{
+    margin-bottom: 5rem;
+}
+
+.DjPlayers .boxContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(27rem,1fr));
+    gap: 1.5rem;
+}
+
+.DjPlayers .boxContainer .box{
+    position: relative;
+    border: 3px solid var(--main);
+    border-radius: 0.6rem;
+    height: 25rem;
+    overflow: hidden;
+}
+
+.DjPlayers .boxContainer .box:hover{
+    transform: scale(1.04);
+    cursor: pointer;
+    box-shadow: var(--boxshadowHover);
+}
+
+.DjPlayers .boxContainer .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.DjPlayers .boxContainer .box .Title{
+    position: absolute;
+    top: -10rem;
+    left: 0;
+    right: 0;
+    background: var(--main);
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.8rem;
+    text-align: center;
+    padding-block: 1rem;
+}
+
+.DjPlayers .boxContainer .box:hover .Title{
+    top: 0;
+}
+
+.DjPlayers .boxContainer .box .Icons{
+    position: absolute;
+    bottom: -10rem;
+    right: 0;
+    left: 0;
+    background: var(--main);
+    padding-block: 1rem;
+    text-align: center;
+}
+
+.DjPlayers .boxContainer .box:hover .Icons{
+    bottom: 0;
+}
+
+.DjPlayers .boxContainer .box .Icons i{
+    font-size: 1.7rem;
+    color: #fff;
+    margin: 0.3rem 1rem;
+}
+
+.DjPlayers .boxContainer .box .Icons i:hover{
+    color: #000;
+}
+
+/*for dj players */
+
+/* for book ticket */
+
+.BookTicket{
+    margin-bottom: 5rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), 
+    rgba(0, 0, 0, 0.8)), url(https://i.pinimg.com/236x/98/8e/1e/988e1eb9c0d11849c3f761a53fc399c2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 50vh;
+    width: 100%;
+    position: relative;
+}
+
+.BookTicketContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.BookTicketContent h6{
+    font-weight: 800;
+    font-size: 8rem;
+}
+
+/* for book ticket */
+
+/* for recent events*/
+
+.RecentEventsSlider .box{
+    border-radius: 0.5rem;
+    box-shadow: var(--boxshadow);
+    padding: 2rem;
+    position: relative;
+}
+
+.RecentEventsSlider .box:hover{
+    transform: scale(1.01);
+    box-shadow: var(--boxshadowHover);
+}
+
+.RecentEvents .box .fa-quote-right{
+    position: absolute;
+    top: 0.1rem;
+    right: 0.1rem;
+    color: var(--main);
+    font-size: 3rem;
+}
+
+.RecentEvents .box .EventBox{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.RecentEvents .box .EventBox img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.RecentEvents .box .EventBox h6{
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.RecentEvents .box .EventBox span{
+    line-height: 1.8;
+    padding: 0.5rem 0;
+    font-size: 1.6rem;
+}
+
+.RecentEvents .box p{
+    font-size: 1.6rem;
+    padding: 0.5rem 0;
+}
+
+/* for contactform */
+
+.ContactForm form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.ContactForm form .inputBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.ContactForm form .inputBox input, textarea{
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0.6rem 0;
+    font-size: 1.5rem;
+    text-transform: none;
+    box-shadow: var(--boxshadow);
+    transition: 0.2s ease-in;
+}
+
+.ContactForm form .inputBox 
+input:focus, textarea:focus{
+    box-shadow: var(--boxshadowHover);
+}
+
+.ContactForm form .inputBox 
+input:focus::placeholder, textarea::placeholder{
+    color: #ccc;
+}
+
+.ContactForm form .inputBox input::placeholder,
+textarea::placeholder{
+    color: #000;
+    font-weight: 600;
+}
+
+.ContactForm form .inputBox input{
+    width: 49%;
+}
+
+.ContactForm form textarea{
+    resize: none;
+}
+
+/*footer*/
+footer{
+    background: var(--main);
+    padding: 2rem;
+    text-align: center;
+}
+
+footer a{
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.6rem;
+}
+
+/* to toggle */
+.theme-toggle{
+    position: fixed;
+    top: 10rem;
+    right: -20rem;
+    background: #000;
+    z-index: 1000;
+    width: 20rem;
+    text-align: center;
+}
+
+.theme-toggle .active{
+    right: 0;
+}
+
+.theme-toggle h3{
+    color: #fff;
+    padding: 1rem 0;
+    font-size: 2rem;
+}
+
+.theme-toggle .buttons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.theme-toggle .buttons .theme-btn{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.theme-toggle .toggle-btn{
+    position: absolute;
+    top: 0;
+    left: -5.9rem;
+    padding: 1.3rem 1.5rem;
+    background: #000;
+    cursor: pointer;
+}
+
+.theme-toggle .toggle-btn i{
+    color: #fff;
+    font-size: 3rem;
+    animation: spin 1s linear infinite;
+}
+
+/*theme toggle*/
+@keyframes spin{
+    0% {
+        transform: rotate(360deg);
+    }
+}
+
+/* for recent events*/
+/* media query */
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .navbar{
+        padding: 1.5rem 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+    /*for about us */
+
+
+    .Aboutus .row .AboutContent h6{
+        font-size: 2.5rem;
+    }
+
+    /* for book ticket */
+    .BookTicketContent h6{
+        font-size: 4rem;
+    }
+
+}
+@media(max-width:768px){
+    #MenuBtn{
+        display: initial;
+    }
+    .NavbarMain{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background: #000;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+       border-top: 0.1rem solid #333;
+    }
+    .NavbarMain.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .fa-times{
+        transform: rotate(180deg);
+    }
+    .NavbarMain a{
+        display: flex;
+        background: #222;
+        border-radius: 0.5rem;
+        padding: 1.3rem;
+        margin: 1.3rem;
+        font-size: 2rem;
+        box-shadow: var(--boxshadow);
+    }
+    .Home{
+        background-position: right;
+        justify-content: center;
+        text-align: center;
+        height: 80vh;
+    }
+
+    .Home .CustomHome{
+        position: relative;
+        height: 80vh;
+        display: flex;
+        align-items: center; 
+    }
+
+    .Home h6{
+        font-size: 4rem !important;
+    }
+    .Home p{
+        font-size: 1.3rem !important;
+    }
+
+    /* for custom */
+
+    .Custom h6{
+        font-size: 3rem;
+    }
+
+    /* for about us*/
+    .Aboutus .row .AboutContent h6{
+        font-size: 2rem;
+    }
+
+    /* for book ticket */
+    .BookTicketContent h6{
+        font-size: 3rem;
+    }
+
+    /*for contactform*/
+    .ContactForm form .inputBox input{
+        width: 100%;
+    }
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+       /* for custom */
+    .Custom h6{
+        font-size: 1.5rem;
+    }
+      /* for about us*/
+      .Aboutus .row .AboutContent h6{
+        font-size: 1.7rem;
+    }
+    
+      .Aboutus .row .AboutContent p{
+        font-size: 1rem;
+    }
+
+    /* for book ticket */
+    .BookTicketContent h6{
+        font-size: 2rem;
+    }
+}
